@@ -1,0 +1,173 @@
+/* บังคับแก้ฟอนต์ที่รากฐานระบบ ป้องกัน Bootstrap ตัวเก่ามาทับ */
+:root {
+    --bs-font-sans-serif: 'Kanit', sans-serif !important;
+}
+
+body {
+    font-family: "Kanit", Arial, sans-serif;
+    /* พื้นหลังไล่เฉดสีม่วงเข้มเข้ม-น้ำเงินคราม */
+    background: linear-gradient(135deg, #1a0933, #301934, #241442);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* เพิ่มบรรทัดนี้ เพื่อให้ Navbar อยู่บน และกล่องการ์ดอยู่ด้านล่าง */
+    align-items: center;
+    /*justify-content: center;*/
+    padding: 0px 0;
+    font-size: 18px !important; 
+    line-height: 26px;
+    margin: 0;
+}
+
+input,
+select,
+textarea,
+button,
+.form-control,
+.form-select,
+.btn {
+    font-family: 'Kanit', sans-serif !important;
+}
+
+/* ======================================================== */
+/* เพิ่มคลาส error สำหรับแสดงข้อความเตือนฟอนต์สีแดง */
+/* ======================================================== */
+label.error {
+    color: #dc3545 !important;
+    /* สีแดงสว่าง (เฉด Bootstrap Danger) */
+    margin-top: 5px;
+    /* ขยับลงมาจากช่องอินพุตเล็กน้อย */
+    display: block;
+    /* บังคับให้ขึ้นบรรทัดใหม่ด้านล่างช่องกรอก */
+    font-weight: 500;
+}
+
+.required {
+    color: #dc3545 !important;
+}
+
+/* กล่องการ์ดสีขาวนวล ตัดกับขอบและเงาสีม่วงจางๆ */
+.register-card {
+    border: 1px solid rgba(74, 20, 140, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(26, 9, 51, 0.4);
+    background-color: #ffffff;
+}
+
+/* สีข้อความหัวข้อหลัก (ม่วงเข้มมาก) */
+.text-purple-dark {
+    color: #3b0066;
+}
+
+/* เส้นใต้และหัวข้อย่อยสีม่วง */
+.border-purple {
+    border-bottom: 2px solid #5e35b1 !important;
+    color: #5e35b1 !important;
+}
+
+/* ปุ่มส่งใบสมัครแบบไล่เฉดสีม่วงเข้มคู่ม่วงสว่าง */
+.btn-submit {
+    background: linear-gradient(135deg, #4a148c, #7b1fa2);
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(135deg, #310c5e, #6a1b9a);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(123, 31, 162, 0.4);
+}
+
+/* ปุ่มล้างข้อมูลเมื่อเอาเมาส์ไปวาง */
+.btn-clear:hover {
+    background-color: #f3e5f5;
+    color: #4a148c;
+    border-color: #4a148c;
+}
+
+/* แถบไฮไลต์เมื่อคลิกเลือกช่องกรอกข้อมูลให้เป็นสีม่วง */
+.form-control:focus,
+.form-select:focus {
+    border-color: #7b1fa2;
+    box-shadow: 0 0 0 0.25px rgba(123, 31, 162, 0.25);
+}
+
+/* สีของ Checkbox เมื่อติ๊กเลือก */
+.form-check-input:checked {
+    background-color: #4a148c;
+    border-color: #4a148c;
+}
+
+/* เพิ่มสไตล์กล่องแจ้งเตือนข้อมูลสำคัญ (ธีมม่วงพาสเทล) */
+.alert-purple {
+  background-color: #f3e5f5 !important; /* สีม่วงอ่อนพาสเทล */
+  border: 1px solid #e1bee7 !important; /* ขอบม่วงจางๆ */
+  color: #4a148c !important;             /* ตัวหนังสือสีม่วงเข้ม */
+  border-radius: 12px;
+}
+
+/* เส้นและวงกลมสถานะสไตล์ธีมม่วง */
+.status-timeline .list-group-item {
+  border-left: 3px solid #e1bee7;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 0;
+  padding-left: 25px;
+}
+.status-timeline .list-group-item.active-purple {
+  border-left-color: #7b1fa2;
+  background: none;
+  color: #4a148c;
+}
+.status-timeline .list-group-item.completed {
+  border-left-color: #4a148c;
+}
+.status-icon {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* สไตล์ปุ่ม Logout */
+.btn-logout {
+  color: #dc3545;
+  border: 1px solid #dc3545;
+  background-color: transparent;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.btn-logout:hover {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+
+/* สไตล์ Navbar พื้นหลังสีขาว ฟอนต์สีม่วง */
+.navbar-white-purple {
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+.navbar-white-purple .navbar-brand {
+  color: #3b0066 !important;
+}
+.navbar-white-purple .nav-link {
+  color: #5e35b1 !important;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.navbar-white-purple .nav-link:hover,
+.navbar-white-purple .nav-link.active {
+  color: #3b0066 !important;
+  background-color: #f3e5f5;
+  font-weight: 600;
+}
+
+/* ปรับขนาดตัวอักษรของป้ายสถานะทั้งหมดให้ใหญ่และอ่านง่ายขึ้น */
+.status-timeline .badge {
+  font-size: 0.9rem !important;  /* ปรับขนาดตัวอักษร (เพิ่ม-ลดตัวเลขนี้ได้ตามชอบ) */
+  padding: 0.5em 0.9em;          /* เพิ่มระยะห่างขอบป้ายให้รับกับขนาดฟอนต์ */
+  font-weight: 500;
+}

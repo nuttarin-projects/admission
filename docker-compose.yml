@@ -1,0 +1,38 @@
+version: '3.8'
+services:
+    php-apache-environment:
+      build:
+          context: .
+          dockerfile: Dockerfile
+      depends_on:
+          - db
+      volumes:
+          - "./:/var/www/html/"
+      ports:
+          - "8001:80"
+    db:
+      container_name: db-mvc
+      platform: linux/x86_64
+      image: mysql:5.7.37
+      restart: always
+      environment:
+          - "MYSQL_ROOT_PASSWORD=Thebest1"
+          - "MYSQL_DATABASE=admission"
+          - "MYSQL_USER=admid"
+          - "MYSQL_PASSWORD=Thebest1"
+      volumes:
+        - "./data/mysql:/var/lib/mysql"
+      ports:
+        - "3307:3306"
+    phpmyadmin:
+      container_name: phpmyadmin-mvc
+      image: phpmyadmin/phpmyadmin
+      ports:
+        - "8081:80"
+      restart: always
+      environment:
+        - "PMA_HOST=db"
+        - "UPLOAD_LIMIT=64M"
+      depends_on:
+        - db
+

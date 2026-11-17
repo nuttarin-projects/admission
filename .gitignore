@@ -1,0 +1,19 @@
+# Docker MySQL Data (สำคัญมาก ห้ามอัปโหลดขึ้น GitHub)
+/data/
+
+# Environment & Config
+.env
+
+# PHP & Composer (เผื่อใช้งานในอนาคต)
+/vendor/
+
+# IDE & Editors
+.vscode/
+.idea/
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+
+# Log Files
+*.log
