@@ -65,7 +65,7 @@
 ### 1. Clone โปรเจกต์ลงเครื่อง
 ```bash
 git clone https://github.com
-cd admission-mvc
+cd admission
 ```
 
 ### 2. สร้างและรัน Container ด้วย Docker
@@ -75,7 +75,7 @@ docker compose up -d --build
 
 ### 3. นำเข้าฐานข้อมูล (Import Database)
 1. เปิด **phpMyAdmin** ผ่านเบราว์เซอร์ที่: `http://localhost:8081`
-2. เข้าสู่ระบบด้วยชื่อผู้ใช้ `admid` และรหัสผ่าน `secretpassword` *(หรือ `root` / `rootpassword`)*
+2. เข้าสู่ระบบด้วยชื่อผู้ใช้ `admid` และรหัสผ่าน `Thebest1` *(หรือ `root` / `rootpassword`)*
 3. เลือกฐานข้อมูล `admission` และทำการ **Import** ไฟล์ `.sql` ของระบบ
 
 ### 4. เข้าใช้งานระบบ
