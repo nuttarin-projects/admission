@@ -64,7 +64,7 @@
 
 ### 1. Clone โปรเจกต์ลงเครื่อง
 ```bash
-git clone https://github.com
+git clone https://github.com/nuttarin-projects/admission.git
 cd admission
 ```
 
